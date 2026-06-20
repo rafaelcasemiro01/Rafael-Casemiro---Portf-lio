@@ -190,7 +190,7 @@ export default function App() {
       {/* NAV */}
       <header id="siteNav" style={s('position:fixed;top:0;left:0;right:0;z-index:110;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(22px,5vw,64px);border-bottom:1px solid transparent;transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease,padding .4s ease;')}>
         <a href="#top" data-magnetic style={s('display:flex;align-items:center;gap:12px;font-family:var(--sfd);font-weight:700;')}>
-          <img src="/assets/logo.png" alt="Logo Rafael Casemiro" style={s('display:block;width:auto;height:46px;object-fit:contain;')} />
+          <img src="/assets/logo.png" alt="Logo Rafael Casemiro" className="nav-logo-img" style={s('display:block;width:auto;height:46px;object-fit:contain;')} />
           <span style={s('display:flex;flex-direction:column;line-height:1.05;')}>
             <span style={s('font-size:15px;letter-spacing:-0.02em;color:#cda32b;')}>Rafael Casemiro</span>
             <span style={s('font-size:11px;font-weight:500;color:#8a8a94;letter-spacing:0.06em;text-transform:uppercase;')}>{c.role}</span>
@@ -209,7 +209,7 @@ export default function App() {
             <span style={s('opacity:.4;')}>/</span>
             <span>{lang === 'pt' ? 'EN' : 'PT'}</span>
           </button>
-          <a href="#contato" data-magnetic className="btn-gold" style={s('display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(198,154,35,0.32);')}>{c.cta}</a>
+          <a href="#contato" data-magnetic className="btn-gold nav-cta" style={s('display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(198,154,35,0.32);')}>{c.cta}</a>
         </div>
       </header>
 
@@ -248,14 +248,14 @@ export default function App() {
               <img src="/assets/rafael-hero.png" alt="Rafael Casemiro" style={s('display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:64% 40%;')} />
               <div style={s('position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.6));')} />
             </div>
-            <div data-magnetic style={s('position:absolute;left:-26px;bottom:54px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
+            <div data-magnetic className="float-chip-left" style={s('position:absolute;left:-26px;bottom:54px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
               <span style={s('display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:16px;')}>✦</span>
               <span style={s('display:flex;flex-direction:column;line-height:1.2;')}>
                 <span style={s('font-size:13px;font-weight:700;')}>Figma · Framer</span>
                 <span style={s('font-size:11px;color:#8a8a94;')}>{c.chipDesign}</span>
               </span>
             </div>
-            <div data-magnetic style={s('position:absolute;right:-22px;top:40px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
+            <div data-magnetic className="float-chip-right" style={s('position:absolute;right:-22px;top:40px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
               <span style={s('display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;background:linear-gradient(135deg,#5a4a1e,#c69a23);color:#fff;font-size:14px;font-weight:700;')}>UX</span>
               <span style={s('display:flex;flex-direction:column;line-height:1.2;')}>
                 <span style={s('font-size:13px;font-weight:700;')}>UI · UX</span>
@@ -265,7 +265,7 @@ export default function App() {
           </div>
         </div>
 
-        <div style={s('position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;')}>
+        <div className="scroll-cue" style={s('position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;')}>
           <span style={s('font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6b6b78;')}>{c.scroll}</span>
           <span style={s('width:22px;height:34px;border:1.5px solid rgba(255,255,255,0.2);border-radius:12px;display:flex;justify-content:center;padding-top:6px;')}>
             <span style={s('width:4px;height:8px;border-radius:2px;background:#c69a23;animation:scrollCue 1.8s ease-in-out infinite;')} />
