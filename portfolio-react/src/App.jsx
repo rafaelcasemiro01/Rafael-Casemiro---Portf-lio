@@ -289,7 +289,7 @@ export default function App() {
       {/* ABOUT */}
       <section id="sobre" className="sec-pad" style={s('position:relative;z-index:3;padding:clamp(90px,12vh,150px) clamp(22px,5vw,64px);max-width:1320px;margin:0 auto;')}>
         <div className="reveal" style={s('display:flex;align-items:center;gap:14px;margin-bottom:46px;')}>
-          <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>01 — {c.aboutKicker}</span>
+          <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>01 · {c.aboutKicker}</span>
           <span style={s('flex:1;height:1px;background:linear-gradient(90deg,rgba(205,163,43,0.5),transparent);')} />
         </div>
         <div className="about-grid" style={s('display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:start;')}>
@@ -315,7 +315,7 @@ export default function App() {
         <div className="reveal" style={s('display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:50px;')}>
           <div>
             <div style={s('display:flex;align-items:center;gap:14px;margin-bottom:18px;')}>
-              <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>02 — {c.projectsKicker}</span>
+              <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>02 · {c.projectsKicker}</span>
             </div>
             <h2 style={s('font-family:var(--sfd);font-weight:600;font-size:clamp(32px,4vw,56px);line-height:1.04;letter-spacing:-0.035em;margin:0;max-width:620px;')}>{c.projectsTitle}</h2>
           </div>
@@ -349,7 +349,7 @@ export default function App() {
       {/* SKILLS */}
       <section id="habilidades" className="sec-pad" style={s('position:relative;z-index:3;padding:clamp(60px,8vh,110px) clamp(22px,5vw,64px) clamp(90px,12vh,150px);max-width:1320px;margin:0 auto;')}>
         <div className="reveal" style={s('display:flex;align-items:center;gap:14px;margin-bottom:46px;')}>
-          <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>03 — {c.skillsKicker}</span>
+          <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>03 · {c.skillsKicker}</span>
           <span style={s('flex:1;height:1px;background:linear-gradient(90deg,rgba(205,163,43,0.5),transparent);')} />
         </div>
         <h2 className="reveal" style={s('font-family:var(--sfd);font-weight:600;font-size:clamp(32px,4vw,56px);line-height:1.04;letter-spacing:-0.035em;margin:0 0 40px;max-width:680px;')}>{c.skillsTitle}</h2>
@@ -396,7 +396,7 @@ export default function App() {
       {/* EXPERIENCE */}
       <section id="experiencia" className="sec-pad" style={s('position:relative;z-index:3;padding:clamp(60px,8vh,110px) clamp(22px,5vw,64px) clamp(90px,12vh,150px);max-width:1320px;margin:0 auto;')}>
         <div className="reveal" style={s('display:flex;align-items:center;gap:14px;margin-bottom:46px;')}>
-          <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>04 — {c.expKicker}</span>
+          <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>04 · {c.expKicker}</span>
           <span style={s('flex:1;height:1px;background:linear-gradient(90deg,rgba(205,163,43,0.5),transparent);')} />
         </div>
         <div className="exp-grid" style={s('display:grid;grid-template-columns:0.42fr 0.58fr;gap:48px;align-items:start;')}>
@@ -421,7 +421,7 @@ export default function App() {
           <div style={s('position:absolute;top:-120px;right:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(198,154,35,0.32),transparent 65%);filter:blur(50px);animation:floatA 16s ease-in-out infinite;')} />
 
           <div style={s('position:relative;margin-bottom:40px;max-width:780px;')}>
-            <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>05 — {c.contactKicker}</span>
+            <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#cda32b;')}>05 · {c.contactKicker}</span>
             <h2 style={s('font-family:var(--sfd);font-weight:700;font-size:clamp(38px,5.5vw,80px);line-height:1.0;letter-spacing:-0.04em;margin:18px 0 20px;')}>{c.contactTitle}</h2>
             <p style={s('font-size:17.5px;line-height:1.7;color:#b0b0bd;max-width:540px;margin:0;')}>{c.contactSub}</p>
           </div>
