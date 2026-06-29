@@ -400,7 +400,7 @@ export default function App() {
           <span style={s('flex:1;height:1px;background:linear-gradient(90deg,rgba(205,163,43,0.5),transparent);')} />
         </div>
         <div className="exp-grid" style={s('display:grid;grid-template-columns:0.42fr 0.58fr;gap:48px;align-items:start;')}>
-          <h2 className="reveal" style={s('font-family:var(--sfd);font-weight:600;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.035em;margin:0;position:sticky;top:120px;')}>{c.expTitle}</h2>
+          <h2 className="reveal exp-title" style={s('font-family:var(--sfd);font-weight:600;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-0.035em;margin:0;position:sticky;top:120px;')}>{c.expTitle}</h2>
           <div style={s('display:flex;flex-direction:column;')}>
             {c.timeline.map((t, i) => (
               <div key={i} className="reveal" style={s('position:relative;padding:0 0 36px 34px;border-left:1px solid rgba(255,255,255,0.12);')}>

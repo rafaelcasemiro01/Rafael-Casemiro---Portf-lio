@@ -79,6 +79,7 @@ button { font-family: var(--sf); }
   .hero-photo { justify-self: start !important; max-width: 100% !important; }
   .about-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
   .exp-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .exp-title { position: static !important; top: auto !important; }
   .skill-feature { grid-template-columns: 1fr !important; gap: 24px !important; }
   .contact-grid { grid-template-columns: 1fr !important; }
   .form-row { grid-template-columns: 1fr !important; }
