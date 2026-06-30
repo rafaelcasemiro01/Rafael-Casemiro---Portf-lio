@@ -213,7 +213,7 @@ export default function App() {
                   onClick={() => setLang(lng)}
                   aria-pressed={active}
                   style={{
-                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '5px',
                     minWidth: '38px', padding: '7px 12px', borderRadius: '999px', border: 'none',
                     fontFamily: 'var(--sf)', fontSize: '12.5px', fontWeight: 700, letterSpacing: '0.04em',
                     cursor: 'pointer', transition: 'background .25s, color .25s, box-shadow .25s',
@@ -222,6 +222,34 @@ export default function App() {
                     boxShadow: active ? '0 2px 10px rgba(198,154,35,0.35)' : 'none',
                   }}
                 >
+                  <span style={{ display: 'inline-flex', width: '20px', height: '14px', borderRadius: '3px', overflow: 'hidden', boxShadow: '0 0 0 1px rgba(0,0,0,0.18)' }}>
+                    {lng === 'pt' ? (
+                      <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="14" fill="#009C3B" />
+                        <path d="M10 1.4 18.6 7 10 12.6 1.4 7Z" fill="#FFDF00" />
+                        <circle cx="10" cy="7" r="3.1" fill="#002776" />
+                      </svg>
+                    ) : (
+                      <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="14" fill="#B22234" />
+                        <g fill="#fff">
+                          <rect y="1.08" width="20" height="1.08" />
+                          <rect y="3.23" width="20" height="1.08" />
+                          <rect y="5.38" width="20" height="1.08" />
+                          <rect y="7.54" width="20" height="1.08" />
+                          <rect y="9.69" width="20" height="1.08" />
+                          <rect y="11.85" width="20" height="1.08" />
+                        </g>
+                        <rect width="8.6" height="7.54" fill="#3C3B6E" />
+                        <g fill="#fff">
+                          <circle cx="1.7" cy="1.5" r="0.5" /><circle cx="4.3" cy="1.5" r="0.5" /><circle cx="6.9" cy="1.5" r="0.5" />
+                          <circle cx="3" cy="3.1" r="0.5" /><circle cx="5.6" cy="3.1" r="0.5" />
+                          <circle cx="1.7" cy="4.7" r="0.5" /><circle cx="4.3" cy="4.7" r="0.5" /><circle cx="6.9" cy="4.7" r="0.5" />
+                          <circle cx="3" cy="6.2" r="0.5" /><circle cx="5.6" cy="6.2" r="0.5" />
+                        </g>
+                      </svg>
+                    )}
+                  </span>
                   {lng.toUpperCase()}
                 </button>
               );
