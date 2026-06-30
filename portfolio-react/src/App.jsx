@@ -204,11 +204,29 @@ export default function App() {
         </nav>
 
         <div style={s('display:flex;align-items:center;gap:12px;')}>
-          <button onClick={toggleLang} className="lang-btn" style={s('display:inline-flex;align-items:center;gap:6px;padding:9px 13px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:#f3f4f8;font-size:12.5px;font-weight:700;letter-spacing:0.04em;cursor:pointer;')}>
-            <span style={s('color:#8a8a94;')}>{lang.toUpperCase()}</span>
-            <span style={s('opacity:.4;')}>/</span>
-            <span>{lang === 'pt' ? 'EN' : 'PT'}</span>
-          </button>
+          <div role="group" aria-label="Idioma / Language" style={s('display:inline-flex;align-items:center;gap:3px;padding:3px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);')}>
+            {['pt', 'en'].map((lng) => {
+              const active = lang === lng;
+              return (
+                <button
+                  key={lng}
+                  onClick={() => setLang(lng)}
+                  aria-pressed={active}
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    minWidth: '38px', padding: '7px 12px', borderRadius: '999px', border: 'none',
+                    fontFamily: 'var(--sf)', fontSize: '12.5px', fontWeight: 700, letterSpacing: '0.04em',
+                    cursor: 'pointer', transition: 'background .25s, color .25s, box-shadow .25s',
+                    background: active ? 'linear-gradient(135deg,#c69a23,#ecc23a)' : 'transparent',
+                    color: active ? '#1a1407' : '#8a8a94',
+                    boxShadow: active ? '0 2px 10px rgba(198,154,35,0.35)' : 'none',
+                  }}
+                >
+                  {lng.toUpperCase()}
+                </button>
+              );
+            })}
+          </div>
           <a href="#contato" data-magnetic className="btn-gold nav-cta" style={s('display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(198,154,35,0.32);')}>{c.cta}</a>
         </div>
       </header>
