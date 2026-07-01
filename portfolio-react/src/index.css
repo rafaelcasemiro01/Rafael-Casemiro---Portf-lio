@@ -49,16 +49,15 @@ button { font-family: var(--sf); }
 .lang-btn:hover { border-color: rgba(198,154,35,0.6); background: rgba(198,154,35,0.12); }
 
 .btn-gold { transition: transform .25s, box-shadow .25s; }
-.btn-gold:hover { box-shadow: 0 18px 48px rgba(198,154,35,0.58); }
+.btn-gold:hover { box-shadow: 0 18px 48px rgba(198,154,35,0.58); transform: translateY(-2px); }
 
-.btn-ghost { transition: border-color .25s, background .25s; }
-.btn-ghost:hover { border-color: rgba(255,255,255,0.4); background: rgba(198,154,35,0.08); }
+.btn-ghost { transition: border-color .25s, background .25s, transform .25s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.4); background: rgba(198,154,35,0.08); transform: translateY(-2px); }
 
 .card-proj { transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s; }
-.card-proj:hover { border-color: rgba(205,163,43,0.32); box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+.card-proj:hover { border-color: rgba(205,163,43,0.32); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
 
 .card-soft { transition: border-color .3s; }
-.card-soft:hover { border-color: rgba(205,163,43,0.4); }
 
 .chip { transition: background .25s, border-color .25s, color .25s; }
 .chip:hover { background: rgba(198,154,35,0.18); border-color: rgba(205,163,43,0.5); color: #fff; }

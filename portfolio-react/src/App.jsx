@@ -65,14 +65,11 @@ function useInteractions(deps) {
       loop();
 
       document.querySelectorAll('[data-magnetic]').forEach((el) => {
-        const strong = el.hasAttribute('data-mag-strong');
-        const fx = strong ? 0.22 : 0.16;
-        const fy = strong ? 0.28 : 0.2;
         const move = (ev) => {
           const r = el.getBoundingClientRect();
           const mx = ev.clientX - (r.left + r.width / 2);
           const my = ev.clientY - (r.top + r.height / 2);
-          el.style.transform = `translate(${mx * fx}px,${my * fy}px) scale(1.035)`;
+          el.style.transform = `translate(${mx * 0.04}px,${my * 0.05}px) scale(1.012)`;
         };
         const leave = () => { el.style.transform = 'translate(0,0) scale(1)'; };
         el.style.willChange = 'transform';
@@ -189,7 +186,7 @@ export default function App() {
 
       {/* NAV */}
       <header id="siteNav" style={s('position:fixed;top:0;left:0;right:0;z-index:110;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(22px,5vw,64px);border-bottom:1px solid transparent;transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease,padding .4s ease;')}>
-        <a href="#top" data-magnetic style={s('display:flex;align-items:center;gap:12px;font-family:var(--sfd);font-weight:700;')}>
+        <a href="#top" style={s('display:flex;align-items:center;gap:12px;font-family:var(--sfd);font-weight:700;cursor:pointer;')}>
           <img src="/assets/logo.png" alt="Logo Rafael Casemiro" className="nav-logo-img" style={s('display:block;width:auto;height:46px;object-fit:contain;')} />
           <span style={s('display:flex;flex-direction:column;line-height:1.05;')}>
             <span style={s('font-size:15px;letter-spacing:-0.02em;color:#cda32b;')}>Rafael Casemiro</span>
@@ -255,7 +252,7 @@ export default function App() {
               );
             })}
           </div>
-          <a href="#contato" data-magnetic className="btn-gold nav-cta" style={s('display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(198,154,35,0.32);')}>{c.cta}</a>
+          <a href="#contato" className="btn-gold nav-cta" style={s('display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(198,154,35,0.32);')}>{c.cta}</a>
         </div>
       </header>
 
@@ -280,10 +277,10 @@ export default function App() {
             <p className="reveal" style={{ ...s('max-width:540px;font-size:clamp(16px,1.3vw,18.5px);line-height:1.65;color:#a5a5b2;margin:0 0 40px;'), transitionDelay: '.16s' }}>{c.heroSub}</p>
 
             <div className="reveal" style={{ ...s('display:flex;flex-wrap:wrap;gap:14px;'), transitionDelay: '.24s' }}>
-              <a href="#projetos" data-magnetic className="btn-gold" style={s('display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 10px 34px rgba(198,154,35,0.4);')}>
+              <a href="#projetos" className="btn-gold" style={s('display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 10px 34px rgba(198,154,35,0.4);')}>
                 {c.heroCta1}<span style={s('font-size:17px;')}>→</span>
               </a>
-              <a href="#contato" data-magnetic className="btn-ghost" style={s('display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.03);color:#f3f4f8;font-size:15px;font-weight:600;cursor:pointer;')}>{c.heroCta2}</a>
+              <a href="#contato" className="btn-ghost" style={s('display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.03);color:#f3f4f8;font-size:15px;font-weight:600;cursor:pointer;')}>{c.heroCta2}</a>
             </div>
           </div>
 
@@ -294,14 +291,14 @@ export default function App() {
               <img src="/assets/rafael-hero.png" alt="Rafael Casemiro" style={s('display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:64% 40%;')} />
               <div style={s('position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.6));')} />
             </div>
-            <div data-magnetic className="float-chip-left" style={s('position:absolute;left:-26px;bottom:54px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
+            <div className="float-chip-left" style={s('position:absolute;left:-26px;bottom:54px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
               <span style={s('display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:16px;')}>✦</span>
               <span style={s('display:flex;flex-direction:column;line-height:1.2;')}>
                 <span style={s('font-size:13px;font-weight:700;')}>Figma · Framer</span>
                 <span style={s('font-size:11px;color:#8a8a94;')}>{c.chipDesign}</span>
               </span>
             </div>
-            <div data-magnetic className="float-chip-right" style={s('position:absolute;right:-22px;top:40px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
+            <div className="float-chip-right" style={s('position:absolute;right:-22px;top:40px;display:flex;align-items:center;gap:10px;padding:11px 15px;border-radius:16px;background:rgba(10,13,22,0.85);border:1px solid rgba(217,182,117,0.18);backdrop-filter:blur(14px);box-shadow:0 14px 40px rgba(0,0,0,0.5);')}>
               <span style={s('display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;background:linear-gradient(135deg,#5a4a1e,#c69a23);color:#fff;font-size:14px;font-weight:700;')}>UX</span>
               <span style={s('display:flex;flex-direction:column;line-height:1.2;')}>
                 <span style={s('font-size:13px;font-weight:700;')}>UI · UX</span>
@@ -346,7 +343,7 @@ export default function App() {
           </div>
           <div style={s('display:flex;flex-direction:column;gap:16px;')}>
             {c.pillars.map((p) => (
-              <div key={p.n} data-magnetic className="reveal card-soft" style={s('position:relative;padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,0.08);background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015));overflow:hidden;')}>
+              <div key={p.n} className="reveal card-soft" style={s('position:relative;padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,0.08);background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015));overflow:hidden;')}>
                 <span style={s('font-family:var(--sfd);font-size:13px;font-weight:700;color:#cda32b;')}>{p.n}</span>
                 <h3 style={s('font-family:var(--sfd);font-weight:600;font-size:21px;margin:8px 0 8px;letter-spacing:-0.02em;')}>{p.title}</h3>
                 <p style={s('font-size:14.5px;line-height:1.6;color:#9b9baa;margin:0;')}>{p.desc}</p>
@@ -370,7 +367,7 @@ export default function App() {
 
         <div style={s('display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;')}>
           {c.projects.map((proj) => (
-            <a key={proj.mark} href={proj.link} target="_blank" rel="noopener noreferrer" data-magnetic data-mag-strong className="reveal card-proj" style={s('position:relative;display:flex;flex-direction:column;border-radius:24px;border:1px solid rgba(255,255,255,0.09);background:rgba(255,255,255,0.02);overflow:hidden;cursor:pointer;')}>
+            <a key={proj.mark} href={proj.link} target="_blank" rel="noopener noreferrer" data-magnetic className="reveal card-proj" style={s('position:relative;display:flex;flex-direction:column;border-radius:24px;border:1px solid rgba(255,255,255,0.09);background:rgba(255,255,255,0.02);overflow:hidden;cursor:pointer;')}>
               <div style={{ ...s('position:relative;aspect-ratio:16/10;background-size:180% 180%;overflow:hidden;display:flex;align-items:center;justify-content:center;'), background: proj.grad }}>
                 <div style={{ ...s('position:absolute;inset:0;background-size:cover;background-position:top center;'), backgroundImage: `url("${proj.img}")` }} />
                 <span style={s('position:absolute;top:16px;left:16px;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);font-size:12px;font-weight:700;color:#fff;')}>{proj.year}</span>
@@ -490,7 +487,7 @@ export default function App() {
                 <textarea name="message" required rows={5} placeholder={c.formMsgPh} className="field" style={s('width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:#f3f4f8;font-family:var(--sf);font-size:15px;outline:none;resize:vertical;line-height:1.55;')} />
               </label>
               <div style={s('display:flex;align-items:center;gap:16px;flex-wrap:wrap;')}>
-                <button type="submit" data-magnetic className="btn-gold" style={s('display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;border:none;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 12px 36px rgba(198,154,35,0.4);')}>
+                <button type="submit" className="btn-gold" style={s('display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;border:none;background:linear-gradient(135deg,#c69a23,#ecc23a);color:#1a1407;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 12px 36px rgba(198,154,35,0.4);')}>
                   {formBtnLabel}<span style={s('font-size:17px;')}>↗</span>
                 </button>
                 {formMsg && (
@@ -501,7 +498,7 @@ export default function App() {
 
             <div style={s('display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px;align-content:start;')}>
               {c.contacts.map((ct) => (
-                <a key={ct.label} href={ct.href} target="_blank" rel="noopener noreferrer" data-magnetic className="contact-card" style={s('display:flex;flex-direction:column;gap:5px;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);')}>
+                <a key={ct.label} href={ct.href} target="_blank" rel="noopener noreferrer" className="contact-card" style={s('display:flex;flex-direction:column;gap:5px;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.03);')}>
                   <span style={s('display:flex;align-items:center;justify-content:space-between;font-size:11.5px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#8a8a94;')}>{ct.label}<span style={s('color:#cda32b;')}>↗</span></span>
                   <span style={s('font-size:14px;font-weight:600;color:#f0f0f5;word-break:break-word;')}>{ct.value}</span>
                 </a>
